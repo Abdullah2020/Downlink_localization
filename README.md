@@ -40,4 +40,4 @@ The module includes the following examples:
 * `lora-downlink-benchmark`
 * `lora-downlink-localization`
 
-Examples can be run via the `./ns3 run example-name` command (refer to `./ns3 run --help` for more options).
+Examples can be run via the `./ns3 run scratch/lora-downlink-localization` command (refer to `./ns3 run --help` for more options).
