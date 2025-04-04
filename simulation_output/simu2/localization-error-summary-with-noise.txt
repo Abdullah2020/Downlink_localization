@@ -1,6 +1,0 @@
-Total localizable devices: 99
-Mean error: 49.6781 meters
-Median error: 44.8623 meters
-Standard deviation: 32.6539 meters
-Min error: 4.42597 meters
-Max error: 183.472 meters

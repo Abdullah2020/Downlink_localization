@@ -1,4 +1,0 @@
-Average Downlink PDR per Gateway
-GW0: 46.1571 %
-GW1: 52.7314 %
-GW2: 40.24 %
