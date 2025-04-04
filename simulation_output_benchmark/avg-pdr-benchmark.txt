@@ -1,0 +1,4 @@
+Average Downlink PDR per Gateway
+GW0: 0 %
+GW1: 0 %
+GW2: 0 %
