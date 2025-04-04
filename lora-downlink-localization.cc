@@ -1,16 +1,3 @@
-/*
- * Copyright (c) 2017 University of Padova
- *
- * SPDX-License-Identifier: GPL-2.0-only
- *
- * Author: Davide Magrin <magrinda@dei.unipd.it>
- */
-
-/*
- * This script simulates a complex scenario with multiple gateways and end
- * devices. The metric of interest for this script is the throughput of the
- * network.
- */
 
  #include "ns3/building-allocator.h"
  #include "ns3/building-penetration-loss.h"
