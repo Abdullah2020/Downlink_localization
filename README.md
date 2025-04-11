@@ -32,12 +32,35 @@ Finally, ensure tests run smoothly with:
 
 If the script reports that all tests passed you are good to go.
 
-## Usage examples
+## Simulation Configuration
 
-The module includes the following examples:
+In our simulation, `scratch/` folder includes the following example files:
 
 * `complete-network-example`
 * `lora-downlink-benchmark`
 * `lora-downlink-localization`
 
-Examples can be run via the `./ns3 run scratch/lora-downlink-localization` command (refer to `./ns3 run --help` for more options).
+The above mentioned files, e.g, `lora-downlink-localization` script allows you to configure various simulation parameters using command-line arguments. Below are the available options:
+
+| Argument              | Description                                                                 | Default Value |
+|-----------------------|-----------------------------------------------------------------------------|---------------|
+| `--nDevices`          | Number of end devices to include in the simulation.                         | `100`         |
+| `--radius`            | The radius (in meters) of the area to simulate.                             | `1000`        |
+| `--realisticChannel`  | Whether to use a more realistic channel model (e.g., buildings, shadowing). | `true`        |
+| `--simulationTime`    | The time (in seconds) for which to simulate.                                | `600`         |
+| `--appPeriod`         | The period (in seconds) for periodically transmitting applications.         | `600`         |
+| `--print`             | Whether or not to print building information to a file.                     | `true`        |
+
+---
+
+## Running the Simulation
+
+You can run the `lora-downlink-localization` example with custom parameters using the following command:
+
+```bash
+./ns3 --run "scratch/lora-downlink-localization --nDevices=200 --radius=500 --realisticChannel=true --simulationTime=1200 --appPeriod=300 --print=true"
+```
+
+
+
+
