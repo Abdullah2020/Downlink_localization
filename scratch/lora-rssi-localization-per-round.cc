@@ -139,9 +139,14 @@ double EstimateDistanceFromRSSI(double txPowerDbm, double rxPowerDbmWithNoise)
 
     // double X_sigma = shadow->GetValue();
 
-    double X_sigma = 0.0;             // Shadowing 
+    double X_sigma = 0.0;             // Shadowing
 
-    double exponent = (txPowerDbm + X_sigma - rxPowerDbmWithNoise) / (10.0 * pathLossExponent);
+    // convert powers from dBm to Watt
+    double txPowerWt = pow(10, txPowerDbm/10)*1/1000;
+    double rxPowerWtWithNoise = pow(10, rxPowerDbmWithNoise/10)*1/1000; 
+
+    // double exponent = (txPowerDbm + X_sigma - rxPowerDbmWithNoise) / (10.0 * pathLossExponent);
+    double exponent = (txPowerWt + X_sigma - rxPowerWtWithNoise) / (10.0 * pathLossExponent);
     double distance = d0 * std::pow(10.0, exponent);
 
     return distance;
